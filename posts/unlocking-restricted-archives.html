@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <meta property="og:title" content="The Anti-Procrastination System: AI Planners That Actually Work">
+    <meta property="og:description" content="Traditional todo lists fail because they don't account for time, energy, or context. AI planners that sync with Canvas, auto-schedule time blocks, and reschedule when things slip actually work.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="UNI_PULSE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Anti-Procrastination System: AI Planners That Actually Work">
+    <meta name="twitter:description" content="Traditional todo lists fail because they don't account for time, energy, or context. AI planners that sync with Canvas, auto-schedule time blocks, and reschedule when things slip actually work.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200">
+    <meta name="description" content="Traditional todo lists fail because they don't account for time, energy, or context. AI planners that sync with Canvas, auto-schedule time blocks, and reschedule when things slip actually work.">
+  <title>The Anti-Procrastination System: AI Planners That Actually Work — UNI_PULSE — UNI_PULSE</title>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-background": "#eadff0",
+            "surface-container-high": "#2e2734",
+            "on-surface": "#eadff0",
+            "on-primary-fixed": "#2b0053",
+            "secondary-fixed": "#4dffb2",
+            "primary-container": "#8f00ff",
+            "inverse-surface": "#eadff0",
+            "on-tertiary-fixed": "#321200",
+            "error-container": "#93000a",
+            "inverse-primary": "#8600ef",
+            "on-secondary-container": "#007149",
+            "surface": "#181622",
+            "outline": "#988ca2",
+            "on-error-container": "#ffdad6",
+            "on-error": "#690005",
+            "on-tertiary-container": "#ffddcb",
+            "surface-container-low": "#1e1b24",
+            "background": "#181622",
+            "on-primary": "#ffffff",
+            "secondary": "#00FFAB",
+            "error": "#ffb4ab",
+            "surface-tint": "#dab9ff",
+            "on-secondary": "#003822",
+            "surface-container-highest": "#2d2836",
+            "secondary-fixed-dim": "#00e297",
+            "on-tertiary-fixed-variant": "#753400",
+            "primary": "#8F00FF",
+            "surface-dim": "#181622",
+            "inverse-on-surface": "#342e3b",
+            "tertiary-fixed": "#ffdbc8",
+            "surface-container": "#1e1c26",
+            "on-primary-fixed-variant": "#6500b8",
+            "primary-fixed": "#efdbff",
+            "on-secondary-fixed-variant": "#005234",
+            "tertiary": "#ffb68b",
+            "surface-container-lowest": "#100e15",
+            "surface-bright": "#3d3744",
+            "tertiary-container": "#a44c00",
+            "secondary-container": "#00FFAB",
+            "surface-variant": "#2d2836",
+            "on-tertiary": "#522300",
+            "tertiary-fixed-dim": "#ffb68b",
+            "outline-variant": "#4d4356",
+            "on-secondary-fixed": "#002112",
+            "on-surface-variant": "#cfc2d9",
+            "on-primary-container": "#efddff",
+            "primary-fixed-dim": "#dab9ff"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            "2xl": "1rem",
+            full: "9999px"
+          },
+          spacing: {
+            "margin-desktop": "48px",
+            gutter: "24px",
+            "margin-mobile": "16px",
+            base: "8px",
+            "container-max": "1440px"
+          },
+          fontFamily: {
+            "headline-lg": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "headline-md": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "label-sm": ["Inter"],
+            display: ["Space Grotesk"],
+            "body-lg": ["Inter"]
+          },
+          fontSize: {
+            "headline-lg": ["40px", { lineHeight: "1.2", fontWeight: "700" }],
+            "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+            "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+            "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+            "label-sm": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+            display: ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .bento-glow { box-shadow: 0px 4px 20px rgba(143, 0, 255, 0.15); }
+    .bento-card-glow { box-shadow: 0px 4px 20px rgba(143, 0, 255, 0.1); }
+    .bento-border { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .active-glow { box-shadow: 0px 0px 15px rgba(0, 255, 171, 0.4); }
+    .neon-border-gradient {
+      border: 2px solid transparent;
+      background: linear-gradient(#181622, #181622) padding-box,
+                  linear-gradient(to right, #8F00FF, #00FFAB) border-box;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .reading-progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 100; background: rgba(255,255,255,0.05); }
+    .reading-progress-bar { height: 100%; width: 0%; background: #8F00FF; box-shadow: 0 0 10px #8F00FF; transition: width 0.1s linear; }
+    .ad-min-height { min-height: 90px; }
+    .ad-native-min-height { min-height: 280px; }
+    @media (min-width: 768px) { .ad-min-height { min-height: 120px; } .ad-native-min-height { min-height: 320px; } }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #181622; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #39323f; border-radius: 10px; }
+    .article-content p { margin-bottom: 2rem; }
+    .article-content h2 { font-family: "Space Grotesk", sans-serif; font-size: 24px; font-weight: 600; line-height: 1.3; color: #eadff0; margin-top: 3rem; margin-bottom: 1.5rem; border-left: 4px solid #8F00FF; padding-left: 1.5rem; }
+    .article-content h3 { font-family: "Space Grotesk", sans-serif; font-size: 20px; font-weight: 600; color: #00ffab; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .article-content ul, .article-content ol { margin-bottom: 2rem; padding-left: 1.5rem; }
+    .article-content li { margin-bottom: 0.75rem; }
+    .article-content strong { color: #eadff0; }
+    .article-content blockquote { border-left: 4px solid #8F00FF; padding-left: 1.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; background: rgba(143, 0, 255, 0.05); border-radius: 0 0.75rem 0.75rem 0; font-style: italic; color: #eadff0; margin-bottom: 2rem; }
+    .article-content code { background: #2e2734; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.875rem; color: #00ffab; }
+    .img-gradient::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, #181622 0%, transparent 60%); pointer-events: none; }
+    .tag-pill { transition: all 0.2s ease; }
+    .tag-pill:hover { border-color: #8F00FF; box-shadow: 0 0 12px rgba(143,0,255,0.2); }
+    #tagSuggestions a:last-child { border-bottom: none; }
+    #tagSuggestions { max-height: 320px; overflow-y: auto; }
+
+    html { scroll-behavior: smooth; }
+    .post-layout-desktop { position: relative; }
+    .post-sidebar { width: 100%; }
+    .post-sidebar .sticky { top: 110px; max-height: calc(100vh - 130px); overflow-y: auto; }
+    .post-sidebar-left { grid-column: span 2 / span 2; }
+    .post-center { grid-column: span 8 / span 8; max-width: 100%; }
+
+    .tier-card {
+      background: linear-gradient(135deg, rgba(143,0,255,0.06) 0%, transparent 100%);
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid rgba(143,0,255,0.1);
+    }
+
+    .scroll-mt-28 { scroll-margin-top: 7rem; }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col selection:bg-primary/20 pb-16 md:pb-0">
+  <div class="reading-progress-container">
+    <div class="reading-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Desktop Header -->
+  <header class="hidden md:block bg-surface/80 backdrop-blur-xl sticky top-0 z-50 border-b border-outline-variant/20 shadow-[0_4px_20px_rgba(143,0,255,0.1)]">
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto gap-4">
+      <div class="flex items-center gap-8 w-full md:w-auto">
+        <a href="/" class="font-display text-headline-md font-bold text-primary drop-shadow-[0_0_8px_rgba(143,0,255,0.5)] whitespace-nowrap">UNI_PULSE</a>
+        <div class="relative flex-grow max-w-md">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+          <input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary/50 text-body-md text-on-surface placeholder:text-on-surface-variant/40" placeholder="Search the pulse..." type="text"/>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Header (simplified) -->
+  <header class="md:hidden bg-surface/80 backdrop-blur-xl sticky top-0 z-50 border-b border-outline-variant/20 shadow-[0_4px_20px_rgba(143,0,255,0.1)]">
+    <div class="flex justify-between items-center w-full px-4 py-4 max-w-container-max mx-auto">
+      <a href="/" class="font-display text-headline-md font-bold text-primary drop-shadow-[0_0_8px_rgba(143,0,255,0.5)]">UNI_PULSE</a>
+    </div>
+  </header>
+
+  <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 md:py-12">
+    <section class="mb-12">
+    <div class="flex items-center gap-2 mb-6"><span class="text-on-surface-variant text-label-sm">8 min Read</span></div>
+    <h1 class="font-display text-headline-lg-mobile md:text-headline-lg mb-8 leading-tight text-on-surface">The Anti-Procrastination System: AI Planners That Actually Work</h1>
+    <div class="w-full aspect-[21/9] rounded-xl overflow-hidden mb-8 border border-outline-variant/30">
+      <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200" alt="The Anti-Procrastination System: AI Planners That Actually Work" loading="eager">
+    </div>
+  </section><div class="post-layout-desktop lg:grid lg:grid-cols-10 lg:gap-gutter"><aside class="post-sidebar post-sidebar-left hidden lg:block">
+    <div class="sticky top-28 flex flex-col gap-8 custom-scrollbar">
+      <div>
+    <h4 class="text-label-sm text-on-surface-variant/40 uppercase tracking-widest mb-4 font-bold">On this page</h4>
+    <ul class="space-y-0.5"><li><a href="#section-0" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">Why Traditional Todo Lists Fail</a></li>
+<li><a href="#section-1" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">The Core System: AI Auto-Scheduling</a></li>
+<li><a href="#section-2" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">The Free Alternative</a></li>
+<li><a href="#section-3" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">The Pomodoro Layer</a></li>
+<li><a href="#section-4" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">How I Use This System (A Typical Week)</a></li>
+<li><a href="#section-5" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">The Results</a></li>
+<li><a href="#section-6" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">Why This Works</a></li>
+<li><a href="#section-7" class="block text-label-sm text-on-surface-variant/60 hover:text-primary transition-colors py-1.5 border-l-2 border-transparent hover:border-primary pl-3">Start Tonight</a></li></ul>
+  </div>
+<div>
+    <h4 class="text-label-sm text-on-surface-variant/40 uppercase tracking-widest mb-4 font-bold">Topics</h4>
+    <div class="flex flex-wrap gap-2"><a href="/tags/the-toolkit" class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-label-sm hover:bg-primary/20 transition-all">#The Toolkit</a><a href="/tags/productivity" class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-label-sm hover:bg-primary/20 transition-all">#Productivity</a><a href="/tags/ai" class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-label-sm hover:bg-primary/20 transition-all">#AI</a><a href="/tags/study-hacks" class="bg-primary/10 text-primary px-3 py-1.5 rounded-full text-label-sm hover:bg-primary/20 transition-all">#Study Hacks</a></div>
+  </div>
+    </div>
+  </aside><div class="post-center lg:col-span-8"><section class="neon-border-gradient p-8 rounded-xl mb-12 bg-surface-container-lowest">
+    <div class="flex items-center gap-3 mb-4 text-secondary-container">
+      <span class="material-symbols-outlined">bolt</span>
+      <h2 class="font-display text-headline-md font-bold tracking-tight">TL;DR: The Short</h2>
+    </div>
+    <p class="text-body-lg leading-relaxed" style="color:#e5d9ec;">Traditional todo lists fail because they don't account for time, energy, or context. AI planners that sync with Canvas, auto-schedule time blocks, and reschedule when things slip actually work.</p>
+  </section><article class="article-content font-body-lg leading-relaxed" style="color:#e5d9ec;"><p>I spent three years believing I was just "bad at productivity." I tried every app: Todoist, Notion, Trello, paper planners, bullet journals. Nothing stuck. The problem wasn't me — it was that none of these tools solved the real problem: figuring out what to work on and when.</p><p>In 2026, AI-powered planners solve this. Here's the system.</p><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-0" class="scroll-mt-28"></span>Why Traditional Todo Lists Fail</h2>
+    </div><p>A todo list tells you what needs to get done. It doesn't tell you when to do it, how long it will take, or what to prioritize when everything is due at once. That's why most students end up working on whatever feels most urgent (or most avoidable) rather than what's most important.</p><p>Todo lists create anxiety. Schedules create clarity.</p><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-1" class="scroll-mt-28"></span>The Core System: AI Auto-Scheduling</h2>
+    </div><p>AI planners like <strong>Sift</strong> or <strong>Motion</strong> connect to your Canvas LMS, Google Calendar, and email, then automatically build a schedule around your actual deadlines.</p><p>Here's how it works:</p><ol>
+<li><strong>Connect your accounts.</strong> Link Canvas, Google Calendar, and email. The AI imports every assignment, exam, and deadline automatically.</li>
+<li><strong>Set your availability.</strong> Tell it when you have class, work, meals, exercise, and sleep. The AI schedules around these blocks.</li>
+<li><strong>Let AI distribute your work.</strong> For a "Research Paper due May 15," the AI breaks it into 12 study blocks spread across the next three weeks, each with a specific subtask: "Find 5 sources," "Read and annotate sources," "Outline argument," "Write introduction," etc.</li>
+<li><strong>Adjust when things change.</strong> If you miss a block, the AI reschedules the remaining work so nothing falls through the cracks.</li>
+</ol><p>Total weekly maintenance: 10-15 minutes.</p><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-2" class="scroll-mt-28"></span>The Free Alternative</h2>
+    </div><p>If $10-20/month for an AI planner isn't in your budget, here's a manual version that works almost as well:</p><ol>
+<li>Every Sunday, open a Google Sheet</li>
+<li>List every assignment, exam, and deadline for the week</li>
+<li>Estimate hours needed for each</li>
+<li>Block time on your Google Calendar for each task, matching task type to time of day:</li>
+</ol><ul>
+<li>Mornings (8am-12pm): Deep work — writing, problem sets, coding</li>
+<li>Afternoons (1pm-5pm): Reading, review, group work</li>
+<li>Evenings (6pm-9pm): Light work — flashcards, organizing notes, admin</li>
+</ul><ol>
+<li>Protect time for meals, exercise, and rest (non-negotiable)</li>
+</ol><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-3" class="scroll-mt-28"></span>The Pomodoro Layer</h2>
+    </div><p>Even with a perfect schedule, you need a way to get started when you don't want to. This is where <strong>Forest</strong> (free) comes in.</p><p>Forest uses a simple psychological trick: set a 25-minute timer, and a virtual tree grows while you work. If you open your phone, the tree dies. It's surprisingly effective because the cost of failure is immediate and visible.</p><p>Use Forest during every scheduled study block. The timer creates a bounded commitment — 25 minutes is short enough that it's easy to start, and long enough to make meaningful progress.</p><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-4" class="scroll-mt-28"></span>How I Use This System (A Typical Week)</h2>
+    </div><h3>Sunday (15 min)</h3>
+Review upcoming deadlines in Canvas. Open AI planner (or my spreadsheet). Confirm AI-generated schedule. Add any personal commitments.</p><h3>Monday-Thursday (25 min blocks)</h3>
+Morning block (1-2 blocks): Deep work on hardest class.
+Afternoon block (1 block): Reading or review.
+Evening block (1 block): Light review, Anki flashcards.</p><h3>Friday (15 min)</h3>
+Review what got done. Move anything that slipped to next week.</p><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">assessment</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-5" class="scroll-mt-28"></span>The Results</h2>
+    </div><ul>
+<li>Assignments submitted before deadline: 100% (was maybe 60%)</li>
+<li>Average sleep: 7.5 hours (was 6)</li>
+<li>GPA improvement: 3.2 → 3.6</li>
+<li>Sunday anxiety: gone</li>
+</ul><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-6" class="scroll-mt-28"></span>Why This Works</h2>
+    </div><p>Procrastination isn't laziness. It's a failure of planning. When you don't know exactly what to work on and when, your brain defaults to whatever is easiest (scrolling, Netflix, video games).</p><p>A schedule that tells you "You need to find 5 sources for your history paper, and you'll do it Tuesday at 10 AM" removes the decision entirely. You don't need motivation. You just need to follow the plan.</p><div class="tier-card mt-12 mb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="material-symbols-outlined text-primary text-2xl">auto_awesome</span>
+      </div>
+      <h2 class="font-display text-headline-md text-on-surface" style="border:none;padding:0;margin:0;"><span id="section-7" class="scroll-mt-28"></span>Start Tonight</h2>
+    </div><p>Spend 15 minutes setting up your schedule for tomorrow. Just tomorrow. Pick three things you need to accomplish and assign them specific time blocks. Tomorrow evening, notice how different it feels to have completed your priority tasks instead of wondering where the day went.</p></article><section class="mt-24 p-8 bg-surface-container rounded-2xl border border-outline-variant/20 flex flex-col md:flex-row gap-8 items-center md:items-start">
+    <div class="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-primary bg-surface-container-highest flex items-center justify-center">
+      <span class="material-symbols-outlined text-4xl text-primary">person</span>
+    </div>
+    <div>
+      <h4 class="font-display text-headline-md text-on-surface mb-2">Written by Lena Okafor</h4>
+      <p class="text-body-md mb-4" style="color:#e5d9ec;">Contributor at UNI_PULSE — decoding the intersection of technology, campus life, and student strategy.</p>
+      <div class="flex gap-4">
+        <a class="text-primary hover:underline text-label-sm font-bold tracking-widest uppercase" href="#">Follow</a>
+        <a class="text-secondary-container hover:underline text-label-sm font-bold tracking-widest uppercase" href="#">More Posts</a>
+      </div>
+    </div>
+  </section><section class="mt-24">
+    <h3 class="font-display text-headline-md text-on-surface mb-8">Related Vibes</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      <a href="/posts/the-ai-policy-lie" class="group block">
+          <div class="aspect-video rounded-xl overflow-hidden mb-4 border border-outline-variant/10">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?w=1200" alt="Your Professor's AI Policy Is a Lie: How to Use AI Without Getting Caught" loading="lazy">
+          </div>
+          <h5 class="font-display text-body-lg font-bold text-on-surface group-hover:text-secondary-container transition-colors">Your Professor's AI Policy Is a Lie: How to Use AI Without Getting Caught</h5>
+          <p class="text-label-sm mt-2" style="color:#e5d9ec;">9 min read</p>
+        </a>
+<a href="/posts/the-student-ai-stack" class="group block">
+          <div class="aspect-video rounded-xl overflow-hidden mb-4 border border-outline-variant/10">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200" alt="The Student AI Stack: 7 Free Tools That Save 10 Hours a Week" loading="lazy">
+          </div>
+          <h5 class="font-display text-body-lg font-bold text-on-surface group-hover:text-secondary-container transition-colors">The Student AI Stack: 7 Free Tools That Save 10 Hours a Week</h5>
+          <p class="text-label-sm mt-2" style="color:#e5d9ec;">10 min read</p>
+        </a>
+    </div>
+  </section></div></div>
+  </main>
+
+  <!-- Desktop Footer -->
+  <footer class="hidden md:block w-full py-12 px-margin-desktop mt-auto bg-surface-container-lowest border-t border-outline-variant/30">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter max-w-container-max mx-auto items-center">
+      <div class="md:col-span-4">
+        <div class="font-display text-headline-md text-primary mb-2">UNI_PULSE</div>
+        <p class="text-on-surface-variant/70 text-body-md">&copy; 2025 UNI_PULSE Ecosystem. All rights reserved.</p>
+      </div>
+      <div class="md:col-span-8 flex flex-wrap justify-end gap-8">
+        <a class="text-on-surface-variant/70 hover:text-on-surface transition-colors cursor-pointer text-body-md" href="#">Affiliates</a>
+        <a class="text-on-surface-variant/70 hover:text-on-surface transition-colors cursor-pointer text-body-md" href="#">Ads</a>
+        <a class="text-on-surface-variant/70 hover:text-on-surface transition-colors cursor-pointer text-body-md" href="#">Privacy</a>
+        <a class="text-on-surface-variant/70 hover:text-on-surface transition-colors cursor-pointer text-body-md" href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Footer (compact) -->
+  <footer class="md:hidden w-full px-4 py-8 mt-auto bg-surface-container-lowest border-t border-outline-variant/30">
+    <div class="text-center">
+      <div class="font-display text-headline-md text-primary mb-2">UNI_PULSE</div>
+      <p class="text-on-surface-variant/50 text-body-md">&copy; 2025 UNI_PULSE Ecosystem</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/20 z-50">
+    <div class="flex justify-around items-center h-16">
+      <a href="/" class="flex flex-col items-center justify-center w-full h-full text-secondary font-bold border-b-2 border-secondary pb-1">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+        <span class="text-[10px] uppercase tracking-tighter">Explore</span>
+      </a>
+      <a href="/tags/the-toolkit" class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary transition-colors duration-300">
+        <span class="material-symbols-outlined">build</span>
+        <span class="text-[10px] uppercase tracking-tighter">Toolkit</span>
+      </a>
+      <a href="/tags/the-grind" class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:text-primary transition-colors duration-300">
+        <span class="material-symbols-outlined">trending_up</span>
+        <span class="text-[10px] uppercase tracking-tighter">Grind</span>
+      </a>
+    </div>
+  </nav>
+
+
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+  </script>
+  <script>window.__ADS_ENABLED = false;</script>
+</body>
+</html>
